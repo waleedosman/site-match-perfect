@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, User, ChevronDown, Delete, ArrowRight } from "lucide-react";
@@ -76,6 +77,12 @@ export const PhoneDialer = () => {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <Link 
+        to="/call-history" 
+        className="fixed top-4 right-4 text-primary hover:text-primary/80 font-medium"
+      >
+        View Call History →
+      </Link>
       <div className="w-full max-w-md relative">
         <div className="bg-background rounded-3xl p-6 shadow-2xl">
           {showTutorial && (
